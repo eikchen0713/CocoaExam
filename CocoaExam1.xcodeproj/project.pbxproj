@@ -13,6 +13,9 @@
 		2D263CE11F7A319B00B482C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D263CDF1F7A319B00B482C4 /* Main.storyboard */; };
 		2D263CED1F7A319C00B482C4 /* CocoaExam1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D263CEC1F7A319C00B482C4 /* CocoaExam1Tests.swift */; };
 		2D263CF81F7A319C00B482C4 /* CocoaExam1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D263CF71F7A319C00B482C4 /* CocoaExam1UITests.swift */; };
+		2D263D8B1F948E2B00B482C4 /* SecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D263D8A1F948E2B00B482C4 /* SecView.swift */; };
+		2D263E031F98822B00B482C4 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D263E001F98821C00B482C4 /* ORSSerial.framework */; };
+		2D263E041F98822B00B482C4 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D263E001F98821C00B482C4 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,42 @@
 			remoteGlobalIDString = 2D263CD51F7A319B00B482C4;
 			remoteInfo = CocoaExam1;
 		};
+		2D263DFF1F98821C00B482C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		2D263E011F98821C00B482C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
+		2D263E051F98822B00B482C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D263E071F98822C00B482C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D263E041F98822B00B482C4 /* ORSSerial.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D263CD61F7A319B00B482C4 /* CocoaExam1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaExam1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +84,8 @@
 		2D263CF31F7A319C00B482C4 /* CocoaExam1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaExam1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D263CF71F7A319C00B482C4 /* CocoaExam1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaExam1UITests.swift; sourceTree = "<group>"; };
 		2D263CF91F7A319C00B482C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D263D8A1F948E2B00B482C4 /* SecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecView.swift; sourceTree = "<group>"; };
+		2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D263E031F98822B00B482C4 /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +117,7 @@
 		2D263CCD1F7A319B00B482C4 = {
 			isa = PBXGroup;
 			children = (
+				2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */,
 				2D263CD81F7A319B00B482C4 /* CocoaExam1 */,
 				2D263CEB1F7A319C00B482C4 /* CocoaExam1Tests */,
 				2D263CF61F7A319C00B482C4 /* CocoaExam1UITests */,
@@ -98,6 +140,7 @@
 			children = (
 				2D263CD91F7A319B00B482C4 /* AppDelegate.swift */,
 				2D263CDB1F7A319B00B482C4 /* ViewController.swift */,
+				2D263D8A1F948E2B00B482C4 /* SecView.swift */,
 				2D263CDD1F7A319B00B482C4 /* Assets.xcassets */,
 				2D263CDF1F7A319B00B482C4 /* Main.storyboard */,
 				2D263CE21F7A319B00B482C4 /* Info.plist */,
@@ -124,6 +167,15 @@
 			path = CocoaExam1UITests;
 			sourceTree = "<group>";
 		};
+		2D263DFB1F98821C00B482C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D263E001F98821C00B482C4 /* ORSSerial.framework */,
+				2D263E021F98821C00B482C4 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,10 +186,12 @@
 				2D263CD21F7A319B00B482C4 /* Sources */,
 				2D263CD31F7A319B00B482C4 /* Frameworks */,
 				2D263CD41F7A319B00B482C4 /* Resources */,
+				2D263E071F98822C00B482C4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2D263E061F98822B00B482C4 /* PBXTargetDependency */,
 			);
 			name = CocoaExam1;
 			productName = CocoaExam1;
@@ -193,6 +247,11 @@
 					2D263CD51F7A319B00B482C4 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					2D263CE71F7A319C00B482C4 = {
 						CreatedOnToolsVersion = 9.0;
@@ -217,6 +276,12 @@
 			mainGroup = 2D263CCD1F7A319B00B482C4;
 			productRefGroup = 2D263CD71F7A319B00B482C4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D263DFB1F98821C00B482C4 /* Products */;
+					ProjectRef = 2D263DFA1F98821C00B482C4 /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2D263CD51F7A319B00B482C4 /* CocoaExam1 */,
@@ -225,6 +290,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2D263E001F98821C00B482C4 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 2D263DFF1F98821C00B482C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D263E021F98821C00B482C4 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 2D263E011F98821C00B482C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2D263CD41F7A319B00B482C4 /* Resources */ = {
@@ -257,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D263D8B1F948E2B00B482C4 /* SecView.swift in Sources */,
 				2D263CDC1F7A319B00B482C4 /* ViewController.swift in Sources */,
 				2D263CDA1F7A319B00B482C4 /* AppDelegate.swift in Sources */,
 			);
@@ -290,6 +373,11 @@
 			isa = PBXTargetDependency;
 			target = 2D263CD51F7A319B00B482C4 /* CocoaExam1 */;
 			targetProxy = 2D263CF41F7A319C00B482C4 /* PBXContainerItemProxy */;
+		};
+		2D263E061F98822B00B482C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			targetProxy = 2D263E051F98822B00B482C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -415,7 +503,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CocoaExam1/CocoaExam1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CocoaExam1/Info.plist;
@@ -430,7 +517,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CocoaExam1/CocoaExam1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CocoaExam1/Info.plist;

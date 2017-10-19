@@ -21,6 +21,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    @IBAction func runTest1(_ sender: Any) {
+        print("Run Test1")
+    }
+    
+    @IBAction func runTest2(_ sender: Any) {
+        print("Run Test2")
+    }
+    
+    @IBAction func runAbout(_ sender: Any) {
+        print("Run About")
+    }
 }
 

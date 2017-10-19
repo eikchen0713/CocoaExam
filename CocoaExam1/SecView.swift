@@ -8,11 +8,25 @@
 
 import Cocoa
 
-class SecView: NSViewController {
+protocol ViewControllerBDelegate: class {
+    func updateText(text:String?)
+}
 
+class SecView: NSViewController {
+    
+    weak var delegate: ViewControllerBDelegate?
+    
+    @IBOutlet weak var SecBtn: NSButton!
+    @IBOutlet weak var secTextView: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        secTextView.stringValue = (representedObject as! String)
+    }
+    @IBAction func secBtnPress(_ sender: Any) {
+        delegate?.updateText(text: secTextView.stringValue)
+        dismiss(nil)
     }
     
 }
