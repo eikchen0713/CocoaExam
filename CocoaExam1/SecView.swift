@@ -8,13 +8,13 @@
 
 import Cocoa
 
-protocol ViewControllerBDelegate: class {
+protocol ViewControllerBDelegate{
     func updateText(text:String?)
 }
 
 class SecView: NSViewController {
     
-    weak var delegate: ViewControllerBDelegate?
+    var delegate: ViewControllerBDelegate?
     
     @IBOutlet weak var SecBtn: NSButton!
     @IBOutlet weak var secTextView: NSTextField!
